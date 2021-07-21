@@ -1,4 +1,5 @@
 ##配置环境
+=====
 1.所用环境为pytorch1.8.1 numpy1.19.2 pandas 1.1.3 python 3.8.5
 ##代码注释及各个文件夹下的内容解析
 2.在cifar10文件夹下（其他文件夹也均类似）有四个python文件，cifar10fedadagrad、cifar10fedadam、cifar10fedyogi分别对应Adaptive Federated Optimiziation一文中的三种算法，resnet.py对应resnet的模型，在cifar10fedadagrad.py中对所有代码都进行了详细的注解，由于代码结构大致相同，并未在其他代码文件中进行赘述，如有需要可直接联系邮箱xdu1816@163.com或1756523104@qq.com。
