@@ -1,3 +1,8 @@
+联邦学习论文复现
+===
+对2021年Google发表在ICLR上的”Adaptive Federated Optimization“一文进行了三种算法在Emnist、Cifar10、Cifar100上的pytorch复现工作，由于本人能力有限，并未做的十分出色，在此与大家分享，欢迎批评指导。
+
+
 配置环境
 ----
 1.所用环境为pytorch1.8.1 numpy1.19.2 pandas 1.1.3 python 3.8.5
