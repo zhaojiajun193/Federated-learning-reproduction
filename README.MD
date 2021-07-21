@@ -4,12 +4,18 @@
 
 代码思路
 ----
+
 由于时间原因，后续进行详细更新，各种代码大同小异，不一一赘述。
 split_and_shuffle_labels、get_iid_subsamples_indices、create_iid_subsamples均为数据集分配函数
 select_client函数为选择每一轮此参与联邦学习训练的client，返回一个数组
 get_new_main_model为根据论文中伪代码，将一个轮次训练完成后各个client的model以及之前的main_model在main_model上进行梯度下降
 create_model_optimizer_criterion_dict为创建各个参与训练的client的模型、优化算法以及损失函数
 send_main_model_to_nodes_and_update_model_dict为在每一轮开始向各个client分配新的main_model，方法较为笨拙，一层一层的将权重赋给其他模型
+start_train_end_node_process_without_print为开始训练
+训练过程中参数取自于论文中所给的最优参数，并未多次训练寻找最优参数或者加入优化参数的算法。
+所有工作均为本人个人完成，之前有参考federated Average中pytorch的复现结果，但是对应的代码找不到了，之后找到会更新到这。
+模型的创建并未与模型训练放到一个代码文件中，采用在模型训练代码中引用模型创建函数的形式创建相应模型，模型均为该论文所给模型，欢迎各位在此基础上更新迭代。
+
 配置环境
 ----
 1.所用环境为pytorch1.8.1 numpy1.19.2 pandas 1.1.3 python 3.8.5
